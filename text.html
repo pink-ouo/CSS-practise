@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+<style>
+  /* header */
+  .mybg{
+    background:url(./text/header-bg.png)center center no-repeat;
+  }
+  .svg{
+    margin-bottom:5px;
+  }
+  /* mainVision */
+  .mainbox{
+    max-width:1920px;
+    /* height: 500px; */
+  }
+  .mainbox img{
+    width: 100%;
+  }
+  .lanicon{
+    width: 2rem;
+  }
+  .indexbg{
+    background: url("text/index-banner-bg.png")center center no-repeat;
+    background-position: center bottom;
+    position:relative;
+    margin-top:-15rem;
+    height:25rem;
+    margin-bottom: -2rem;
+    z-index: 1;
+  }
+  .indexbg1{
+    background: url("text/index-banner-bg.png")center center no-repeat;
+    background-position: center bottom;
+    position:relative;
+    margin-top:-15rem;
+    height:25rem;
+    margin-bottom: -2rem;
+    z-index: -1;
+  }
+  /* search */
+  .row1{
+    display: flex;
+    justify-content: space-around;
+  }
+  /* wraper */
+  .wraper h2{
+    text-align: center;
+    margin: 2rem 0 ;
+  }
+  /* hot place */
+  .card{
+    border-radius:20px;
+    background-color: #F8FCFC;
+    margin: 5px;
+  }
+  .card img{
+    border-radius:20px 20px 0 0 ;
+    overflow: hidden;
+    height: 200px;
+  }
+  .card-body{
+    padding:0.5rem ;
+    
+  }
+  /* green-wrap */
+.g-wraper{
+  text-align: center;
+  margin: 2rem 0 ;
+  color: #00969e;
+}
+.cov-card{
+  background-color: white;
+  margin: 0 10px;
+}
+.cov-card img{
+  width: 100%;
+  align-items: center;
+}
+.cov-title{
+  color: #00969e;
+  text-align: center;
+  margin: 1rem;
+}
+
+.sharecard {
+  overflow: hidden;
+  background-size:cover;
+  border-radius: 5px;
+  
+}
+.sharerow{
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.share{
+  margin: 5px;
+}
+
+.share img{
+  max-width: 200px;
+  max-height: 250px;
+  border-radius: 10px;
+  object-fit:cover;
+  position: relative;
+  height: 250px;
+}
+.cardword{
+  position: absolute;
+  left: 50%;
+  top:65%;
+}
+/* destination-more */
+.desmore{
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+
+}
+
+.desmoreimg{
+  width: 20%;
+  height: 500px;
+  background-size: contain;
+  overflow: hidden;
+}
+/* win */
+.win{
+  width: 100%;
+  text-align: center;
+}
+.winbox{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.mywin{
+  padding: 30px;
+  margin-top: 50px;
+
+}
+.win-m{
+  border-right: 1px solid #00969e;
+  border-left: 1px solid #00969e;
+}
+.mywin h4{
+  color:#00969e ;
+}
+.mywin p{
+  color: #7E7D7D
+}
+/* footer */
+.footerbg{
+  background: url("./text/footerbg.png")center top no-repeat;
+  background-position: center bottom;
+  position:relative;
+  margin-top:-15rem;
+  height:25rem;
+  margin-bottom: -2rem;
+}
+.footerbgmain{
+  background: url("./text/footer.png")center center repeat-y;
+  background-position: center bottom;
+  position:relative;
+  margin-top:-1rem;
+  height:44rem;
+  margin-bottom: -2rem;
+}
+.search{
+  width:110%;
+  height: 6rem;
+  display: flex;
+  background-color: rgba(255, 255, 255, .15);
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.aboutdonat{
+  width: 30%;
+}
+.inputbox input{
+  width: 80%;
+}
+.inputbox a{
+  background: #15989d;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0.3rem 1rem;
+}
+.inputbox{
+  padding-top: 10px;
+  width:30%;
+  height: 0.675rem;
+}
+.notice{
+  width: 35%;
+}
+.aboutdonat h4{
+  color:#b8e0e1;
+
+}
+.aboutdonat p{
+  color:#c0c2c7;
+}
+
+.notice p{
+  color:#c0c2c7;
+}
+/*  */
+.info{
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-left li{
+  list-style: none;
+  color: #fff;
+}
+.info-left .tit{
+  color: #b8e0e1;
+}
+.info-right li{
+  list-style: none;
+  color: #fff;
+}
+.info li a{
+  color: #fff;
+}
+.tit{
+  color: #b8e0e1;
+}
+.info-left{
+  width: 70%;
+  display: flex;
+}
+.info-left ul{
+  padding-right: 10rem;
+  line-height: 2;
+}
+
+.info-right{
+  width: 30%;
+  border-left:1px solid #fff ;
+}
+/*  */
+.footershare img{
+  margin: 10px;
+}
+
+.logolinker{
+  text-align: center
+}
+.logolinker img{
+  width: 120px;
+  margin-top: 44px;
+}
+.footword{
+  margin-top: 44px;
+  text-align: center;
+  font-size: .35rem;
+  color: #fff;
+}
+label {
+ width: 8rem;
+}
+
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+<!--header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mybg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="text/logo.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+      <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+      <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+      <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+      </svg>
+      <span class="navbar-toggler-icon"></span> 
+  </button>      
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav px-5">
+        <a class="nav-link active ml-5" aria-current="page" href="#">計畫行程</a>
+        <a class="nav-link active" aria-current="page" href="#">優惠及特色活動</a>
+        <a class="nav-link active" aria-current="page" href="#">星夢船隊</a>
+        <a class="nav-link active" aria-current="page" href="#">郵輪生活</a>
+        <a class="nav-link active" aria-current="page" href="#">航程管理</a>
+        <a class="nav-link active mr-5" aria-current="page" href="#">客戶服務</a>
+        <div class="lan pt-1">
+          <img class="lanicon" src="/text/lanicon.svg" alt="">
+          <a style="color: white;">繁體中文</a>
+        </div>
+        <button class="btn btn-outline-light ml-5" type="submit">
+          <svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          </svg>註冊
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- mainVision -->
+<div class="mainbox">
+  <img src="./text/mainVision.jpg" alt="">
+</div>
+<div class="indexbg"></div>
+<!-- search -->
+<div class="container">
+  <div class="row1">
+    <div class="main-search-box">
+      <div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-primary dropdown-toggle btn-light btn-lg px-4 py-1" type="button">出發港口</button>
+          <button class="btn btn-primary dropdown-toggle btn-light btn-lg px-4 py-1" type="button">出發月份</button>
+          <button class="btn btn-info btn-sm px-3 py-2 "type="button">搜索</button>
+      </div>
+  </div>
+  </div>
+</div>
+<!-- wraper -->
+<div class="container">
+  <div class="rpw">
+    <div class="wraper">
+      <h2>熱門推薦</h2>
+    </div>
+  </div>
+</div>
+<!-- hot place -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <img src="./text/hot-l.jpg" alt="">
+        <div class="card-body">
+          <h5 class="card-title">最優惠價格</h5>
+          <p>為您選取最優惠價格，享受精彩郵</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <img src="./text/hot-r.jpg" alt="">
+        <div class="card-body">
+          <h5 class="card-title">The PALACE 皇宫 「船中豪華船」</h5>
+          <p>獨特「船中豪華船」概念設計，打造獨一無二的豪華遊輪體驗。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- wraper -->
+<div class="indexbg1"></div>
+<div class="container">
+  <div class="rpw">
+    <div class="wraper">
+      <h2>船上體驗</h2>
+    </div>
+  </div>
+</div>
+<!--onboat-->
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="./text/onboat-1.jpg" alt="">
+        <div class="card-body">
+          <p class="card-title">「小小夢想家」海上學堂</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="./text/onboat-2.jpg" alt="">
+        <div class="card-body">
+          <p class="card-title">VR探索館</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+          <img src="./text/onboat-3.jpg" alt="">
+          <div class="card-body">
+            <p class="card-title">現場大型表演</p>
+          </div>
+        </div>
+      </div>
+    <div class="col">
+      <div class="card">
+          <img src="./text/onboat-4.jpg" alt="">
+          <div class="card-body">
+            <p class="card-title">會議及獎勵旅遊</p>
+          </div>
+        </div>
+      </div>
+    <div class="col">
+      <div class="card">
+          <img src="./text/onboat-5.jpg" alt="">
+          <div class="card-body">
+            <p class="card-title">美食盛宴</p>
+          </div>
+        </div>
+      </div>
+    <div class="col">
+        <div class="card">
+            <img src="./text/onboat-6.jpg" alt="">
+            <div class="card-body">
+              <p class="card-title">觀看虛擬實境(Virtual Reality)</p>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+<!-- green-wrap -->
+<div class="container">
+  <div class="rpw">
+    <div class="g-wraper">
+      <h2>保障健康出「郵」環境　守護無憂海上假期</h2>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="cov-card">
+        <img src="./text/cov-1.png" alt="">
+        <div class="card-body">
+          <h5 class="cov-title">100% 新風系統</h5>
+          <p class="cov-title">每間客房、船員房間及公共區域均配備 100% 新鮮室外空氣循環系統</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="cov-card">
+        <img src="./text/cov-2.png" alt="">
+        <div class="card-body">
+          <h5 class="cov-title">登船及離船</h5>
+          <p class="cov-title">所有人員登船前，須進行健康申報和體溫檢測</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="cov-card">
+        <img src="./text/cov-3.png" alt="">
+        <div class="card-body">
+          <h5 class="cov-title">安心出「郵」</h5>
+          <p class="cov-title">客房全面提高消殺清潔等級及次數；全船公共區域均進行雙重消殺清潔</p>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-3">
+      <div class="cov-card">
+        <img src="./text/cov-4.png" alt="">
+        <div class="card-body">
+          <h5 class="cov-title">食品衛生</h5>
+          <p class="cov-title">旅客進入餐飲場所前，建議在各個餐飲場所出入口，使用免洗洗手液進行清潔消毒</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- knowmore -->
+<div class="container">
+  <div class="row" style="justify-content: center">
+    <div class="knowmore">
+      <button class="btn btn-info btn-lg"type="button" >了解更多</button>
+    </div>
+  </div>
+</div>
+<!-- share -->
+<div class="container">
+  <div class="rpw">
+    <div class="g-wraper">
+      <h2>要跟我們分享您在船上的體驗嗎？</h2>
+      <p>在貼文上標籤<a href=""> @dreamcruiseline </a>並標籤 <em>#探索夢號 </em>或<em> #ExplorerDream </em>，您的照片將有機會在我們的平台上跟大家分享！</p>
+    </div>
+  </div>
+</div>
+<!--share-img -->
+<div class="container">
+  <div class="row">
+    <div class="sharerow d-flex">
+      <div class="share">
+        <img src="./text/share-1.jpeg" alt="">
+      </div>
+      <div class="cardword text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+        </svg>
+        <p class="card-text">vv4vv</p>
+      </div>
+
+      <div class="share">
+        <img src="./text/share-2.jpeg" alt="">
+      </div>
+      <div class="share">
+        <img src="./text/share-3.jpeg" alt="">
+      </div>
+      <div class="share">
+        <img src="./text/share-4.jpeg" alt="">
+      </div>
+      <div class="share">
+        <img src="./text/share-5.jpeg" alt="">
+      </div>
+      <div class="share">
+        <img src="./text/share-6.jpeg" alt="">
+      </div>
+      <div class="share">
+        <img src="./text/share-7.jpeg" alt="">
+      </div>
+      <div class="share">
+        <img src="./text/share-8.jpeg" alt="">
+      </div>
+      <div class="share">
+        <img src="./text/share-9.jpeg" alt="">
+      </div>
+      <div class="share">
+        <img src="./text/share-10.jpeg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- more -->
+<div class="container">
+  <div class="row" style="justify-content: center">
+    <div class="knowmore">
+      <button type="button" class="btn btn btn-info px-5">更多精彩體驗</button>
+    </div>
+  </div>
+</div>
+<!-- destination -->
+<div class="container">
+  <div class="rpw">
+    <div class="wraper">
+      <h2>目的地</h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row" style="justify-content: center">
+      <div class="knowmore">
+        <button type="button" class="btn btn btn-info px-5">探索更多></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- destination-more -->
+  <div class="desmore">
+            <div class="desmoreimg">
+              <img src="./text/exploremore-1.jpg" alt="">
+            </div>
+            <div class="desmoreimg">
+              <img src="./text/exploremore-2.jpg" alt="">
+            </div>
+            <div class="desmoreimg">
+              <img src="./text/exploremore-3.jpg" alt="">
+            </div>
+            <div class="desmoreimg">
+              <img src="./text/exploremore-4.jpg" alt="">
+            </div>
+            <div class="desmoreimg">
+              <img src="./text/exploremore-5.jpg" alt="">
+            </div>
+            <div class="desmoreimg">
+              <img src="./text/exploremore-6.jpg" alt="">
+            </div>
+        </div>
+
+<!--win--> 
+<div class="indexbg"></div>
+<div class="win"><img src="./text/win.png" alt=""></div>
+<div class="container">
+  <div class="row">
+    <div class="winbox">
+      <div class="mywin won-l">
+        <h4>會議及獎勵旅遊</h4>
+        <p>打造的現代化海上商務之城</p>
+        <button type="button" class="btn btn btn-info px-5">了解詳情></button>
+      </div>
+      <div class="mywin win-m">
+        <h4>旅客專用手機App</h4>
+        <p>已登船旅客專用</p>
+        <div class="store">
+          <a href=""><img src="./text/applestoree.png" alt=""></a>
+          <a href=""><img src="./text/googleplay.png" alt=""></a>
+        </div>
+      </div>
+      <div class="mywin win-r">
+        <h4>媒體中心</h4>
+        <p>新聞稿詳情及媒體咨詢</p>
+        <button type="button" class="btn btn btn-info px-5">了解詳情></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- footer -->
+<div class="footerbg"></div>
+<div class="footerbgmain">
+  <div class="container ">
+    <div class="row ">
+      <div class="footer">
+        <div class="search">
+            <div class="aboutdonat">
+              <h4>訂閱優惠資訊</h4>
+              <p>請輸入您的電子郵箱以訂閱我們的最新優惠資訊</p>
+            </div>
+            <div class="inputbox">
+              <input type="input"placeholder="請填寫您的Email地址">
+              <a href="">訂閱</a>
+            </div>
+            <div class="notice">
+              <p>通過訂閱優惠資訊，您同意使用轉移您的個人資料作直接促銷用途。</p>
+            </div>
+        </div>
+        <div class="info">
+          <div class="info-left">
+            <ul>
+              <li><a class="tit" href="">快速鏈結</a></li>
+              <li><a href="">郵輪航線</a></li>
+              <li><a href="">精緻客房</a></li>
+              <li><a href="">環球美食</a></li>
+              <li><a href="">常見問題</a></li>
+              <li><a href="">資料下載</a></li>
+              <li><a href="">媒體中心</a></li>
+              <li><a href="">關於我們</a></li>
+              <li><a href="">工作機會</a></li>
+            </ul>
+            <ul>
+              <li><a href="">&nbsp;</a></li>
+              <li><a href="">聯繫我們</a></li>
+              <li><a href="">法律公告</a></li>
+              <li><a href="">會議及獎勵旅遊</a></li>
+              <li><a href="">新聞中心</a></li>
+              <li><a href="">星夢薈</a></li>
+              <li><a href="">重要通知</a></li>
+              <li><a href="">旅行社預定</a></li>
+            </ul>
+          </div>
+          <div class="info-right">
+          <ul>
+            <li><p class="tit">聯繫我們</p></li>
+            <li><label>台灣</label>886-2-21759578</li>
+            <li><label>中國香港</label>852-2317-7711</li>
+            <li><label>新加坡</label>65-6808-2288</li>
+            <li><label>馬來西亞</label>603-2302-1288</li>
+            <li><label>菲律賓</label>63-2-8836-6080</li>
+            <li><label>電腦預定</label>reservations.cn@gentingcruiselines.com</li>
+            <li><label>客戶服務</label>chi.customerservice@gentingcruiselines.com</li>
+            <div class="footershare d-flex">
+              <a href=""><img src="./text/fb.png" alt=""></a>
+              <a href=""><img src="./text/ig.png" alt=""></a>
+              <a href=""><img src="./text/line.png" alt=""></a>
+            </div>
+          </ul>
+        </div>
+        </div>
+        <div class="logolinker">
+          <a href=""><img src="./text/gen.png" alt=""></a>
+          <a href=""><img src="./text/star.png" alt=""></a>
+          <a href=""><img src="./text/crystal.png" alt=""></a>
+        </div>
+        <div class="footword">
+          <p>©2021年星夢郵輪。保留所有權利</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+</html>
